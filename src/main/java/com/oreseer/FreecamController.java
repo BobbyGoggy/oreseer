@@ -57,6 +57,8 @@ public final class FreecamController {
 		}
 
 		active = true;
+		var velocity = mc.player.getDeltaMovement();
+        mc.player.setDeltaMovement(0.0, velocity.y, 0.0);
 
 		x = mc.player.getX();
 		y = mc.player.getEyeY();
