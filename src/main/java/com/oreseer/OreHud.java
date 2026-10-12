@@ -15,7 +15,7 @@ public final class OreHud {
 	public static void extract(GuiGraphicsExtractor g, DeltaTracker delta) {
 		Minecraft mc = Minecraft.getInstance();
 		OreSeerConfig cfg = OreSeerConfig.get();
-		if (!OreScanner.isActive(mc) || mc.gui.hud().isHidden()) {
+		if (!OreScanner.isActive(mc) || mc.gui.hud.isHidden()) {
 			return;
 		}
 		OreScanner.Snapshot snap = OreScanner.snapshot();
