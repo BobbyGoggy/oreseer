@@ -45,7 +45,7 @@ public class OreSeerClient implements ClientModInitializer {
 			new KeyMapping("key.oreseer.cycle_style", InputConstants.Type.KEYBOARD, InputConstants.KEY_J, category));
 
 		ClientTickEvents.END_CLIENT_TICK.register(OreSeerClient::onTick);
-		LevelRenderEvents.AFTER_TRANSLUCENT_TERRAIN.register(OreRenderer::render);
+		LevelRenderEvents.END_MAIN.register(OreRenderer::render);
 		HudElementRegistry.attachElementBefore(VanillaHudElements.CHAT, id("hud"), OreHud::extract);
 		ClientLifecycleEvents.CLIENT_STOPPING.register(client -> OreRenderer.close());
 
