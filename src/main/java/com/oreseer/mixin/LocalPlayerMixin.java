@@ -4,7 +4,6 @@ package com.oreseer.mixin;
 import com.oreseer.FreecamController;
 import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.world.entity.player.Input;
-import net.minecraft.world.phys.Vec2;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -20,8 +19,5 @@ public abstract class LocalPlayerMixin {
 
 		LocalPlayer player = (LocalPlayer) (Object) this;
 		player.input.keyPresses = Input.EMPTY;
-
-		((ClientInputAccessor) player.input)
-			.oreseer$setMoveVector(Vec2.ZERO);
 	}
 }
