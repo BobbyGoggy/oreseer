@@ -2,21 +2,21 @@ package com.oreseer;
 
 import java.util.function.Predicate;
 
-import net.minecraft.tags.BlockTags;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.Blocks;
+import net.minecraft.registry.tag.BlockTags;
 
 public enum OreType {
-	ANCIENT_DEBRIS("Ancient Debris", s -> s.is(Blocks.ANCIENT_DEBRIS), true, HighlightStyle.RIPPLE, 1),
-	DIAMOND("Diamond", s -> s.is(BlockTags.DIAMOND_ORES), true, HighlightStyle.CRYSTAL, 3),
-	EMERALD("Emerald", s -> s.is(BlockTags.EMERALD_ORES), true, HighlightStyle.ORBIT, 4),
-	GOLD("Gold", s -> s.is(BlockTags.GOLD_ORES), true, HighlightStyle.AURORA, 5),
-	REDSTONE("Redstone", s -> s.is(BlockTags.REDSTONE_ORES), true, HighlightStyle.HEARTBEAT, 2),
-	LAPIS("Lapis", s -> s.is(BlockTags.LAPIS_ORES), true, HighlightStyle.PRISM, 8),
-	QUARTZ("Nether Quartz", s -> s.is(Blocks.NETHER_QUARTZ_ORE), true, HighlightStyle.GLITCH, 7),
-	IRON("Iron", s -> s.is(BlockTags.IRON_ORES), false, HighlightStyle.PRISM, 9),
-	COPPER("Copper", s -> s.is(BlockTags.COPPER_ORES), false, HighlightStyle.AURORA, 1),
-	COAL("Coal", s -> s.is(BlockTags.COAL_ORES), false, HighlightStyle.GLITCH, 7);
+	ANCIENT_DEBRIS("Ancient Debris", s -> s.isOf(Blocks.ANCIENT_DEBRIS), true, HighlightStyle.RIPPLE, 1),
+	DIAMOND("Diamond", s -> s.isIn(BlockTags.DIAMOND_ORES), true, HighlightStyle.CRYSTAL, 3),
+	EMERALD("Emerald", s -> s.isIn(BlockTags.EMERALD_ORES), true, HighlightStyle.ORBIT, 4),
+	GOLD("Gold", s -> s.isIn(BlockTags.GOLD_ORES), true, HighlightStyle.AURORA, 5),
+	REDSTONE("Redstone", s -> s.isIn(BlockTags.REDSTONE_ORES), true, HighlightStyle.HEARTBEAT, 2),
+	LAPIS("Lapis", s -> s.isIn(BlockTags.LAPIS_ORES), true, HighlightStyle.PRISM, 8),
+	QUARTZ("Nether Quartz", s -> s.isOf(Blocks.NETHER_QUARTZ_ORE), true, HighlightStyle.GLITCH, 7),
+	IRON("Iron", s -> s.isIn(BlockTags.IRON_ORES), false, HighlightStyle.PRISM, 9),
+	COPPER("Copper", s -> s.isIn(BlockTags.COPPER_ORES), false, HighlightStyle.AURORA, 1),
+	COAL("Coal", s -> s.isIn(BlockTags.COAL_ORES), false, HighlightStyle.GLITCH, 7);
 
 	public static final OreType[] ALL = values();
 
