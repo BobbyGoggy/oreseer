@@ -2,7 +2,7 @@ package com.oreseer;
 
 import java.util.function.Predicate;
 
-import net.minecraft.registry.tag.BlockTags;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 
