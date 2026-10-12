@@ -1,0 +1,23 @@
+{
+	"schemaVersion": 1,
+	"id": "oreseer",
+	"version": "${version}",
+	"name": "OreSeer",
+	"description": "Ore & Ancient Debris finder with exotic through-the-wall highlight effects, radar HUD and a multi-page settings menu.",
+	"authors": [
+		"You"
+	],
+	"license": "MIT",
+	"environment": "client",
+	"entrypoints": {
+		"client": [
+			"com.oreseer.OreSeerClient"
+		]
+	},
+	"depends": {
+		"fabricloader": ">=0.19.5",
+		"minecraft": "~26.3",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}
