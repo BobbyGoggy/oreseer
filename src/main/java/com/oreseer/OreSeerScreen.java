@@ -14,7 +14,7 @@ import net.minecraft.network.chat.Component;
 
 /** Multi-page settings menu: General / Ancient Debris / Ores / Effects / HUD. */
 public class OreSeerScreen extends Screen {
-	private static final String[] PAGES = { "General", "Ancient Debris", "Ores", "Effects", "HUD" };
+	private static final String[] PAGES = { "General", "Ancient Debris", "Ores", "Effects", "HUD", "Freecam" };
 	private static int lastPage = 0;
 	private static OreType selectedOre = OreType.DIAMOND;
 
