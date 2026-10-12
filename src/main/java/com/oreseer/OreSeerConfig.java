@@ -25,6 +25,13 @@ public class OreSeerConfig {
 	public int verticalRadius = 40;
 	public int columnsPerTick = 3;
 	public int maxHighlights = 140;
+	// --- Freecam ---
+public boolean freecamEnabled = false;
+public double freecamSpeed = 1.0;
+public double freecamVerticalSpeed = 1.0;
+public boolean freecamNightVision = true;
+public boolean freecamHideOres = true;
+public boolean freecamHideOreSeer = true;
 	
 	// --- freecam ---
 	public boolean freecamEnabled = false;
