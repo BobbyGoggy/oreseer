@@ -38,7 +38,6 @@ public enum OreType {
 		return matcher.test(state);
 	}
 
-	/** Returns the ore type of a block state, or null if it is not an ore we track. */
 	public static OreType of(BlockState state) {
 		if (state.isAir()) {
 			return null;
