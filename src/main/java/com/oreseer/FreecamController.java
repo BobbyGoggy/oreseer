@@ -89,7 +89,7 @@ public final class FreecamController {
 
 		mc.player.setDeltaMovement(0, 0, 0);
 
-		if (mc.screen != null) {
+		if (mc.gui.screen() != null) {
 			return;
 		}
 
