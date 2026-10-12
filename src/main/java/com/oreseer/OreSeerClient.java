@@ -36,13 +36,13 @@ public class OreSeerClient implements ClientModInitializer {
 
 		KeyMapping.Category category = KeyMapping.Category.register(id("main"));
 		openMenu = KeyMappingHelper.registerKeyMapping(
-			new KeyMapping("key.oreseer.menu", InputConstants.Type.KEYSYM, InputConstants.KEY_O, category));
+			new KeyMapping("key.oreseer.menu", InputConstants.Type.KEYBOARD, InputConstants.KEY_O, category));
 		toggle = KeyMappingHelper.registerKeyMapping(
-			new KeyMapping("key.oreseer.toggle", InputConstants.Type.KEYSYM, InputConstants.KEY_K, category));
+			new KeyMapping("key.oreseer.toggle", InputConstants.Type.KEYBOARD, InputConstants.KEY_K, category));
 		debrisOnly = KeyMappingHelper.registerKeyMapping(
-			new KeyMapping("key.oreseer.debris_only", InputConstants.Type.KEYSYM, InputConstants.KEY_H, category));
+			new KeyMapping("key.oreseer.debris_only", InputConstants.Type.KEYBOARD, InputConstants.KEY_H, category));
 		cycleStyle = KeyMappingHelper.registerKeyMapping(
-			new KeyMapping("key.oreseer.cycle_style", InputConstants.Type.KEYSYM, InputConstants.KEY_J, category));
+			new KeyMapping("key.oreseer.cycle_style", InputConstants.Type.KEYBOARD, InputConstants.KEY_J, category));
 
 		ClientTickEvents.END_CLIENT_TICK.register(OreSeerClient::onTick);
 		LevelRenderEvents.AFTER_TRANSLUCENT_TERRAIN.register(OreRenderer::render);
