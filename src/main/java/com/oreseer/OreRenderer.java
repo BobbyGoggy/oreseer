@@ -8,8 +8,8 @@ import org.joml.Matrix4fc;
 import org.joml.Vector3f;
 import org.joml.Vector4f;
 
-import com.mojang.blaze3d.buffers.GpuBufferSlice;
-import com.mojang.blaze3d.pipeline.RenderPipeline;
+import com.mojang.renderpearl.api.buffers.GpuBufferSlice;
+import com.mojang.renderpearl.api.pipeline.RenderPipeline;
 import com.mojang.blaze3d.systems.RenderSystem;
 
 import net.fabricmc.fabric.api.client.rendering.v1.level.LevelRenderContext;
@@ -109,7 +109,7 @@ public final class OreRenderer {
 			try (var pass = RenderSystem.getDevice().createCommandEncoder().createRenderPass(
 				() -> OreSeerClient.MOD_ID + " xray pass", target.getColorTextureView(),
 				Optional.empty(), target.getDepthTextureView(), OptionalDouble.empty())) {
-				pass.setPipeline(THROUGH_WALLS);
+				pass.setPipeline(RenderSystem.getCompiledPipeline(THROUGH_WALLS));
 				RenderSystem.bindDefaultUniforms(pass);
 				pass.setUniform("DynamicTransforms", transform);
 				pass.setVertexBuffer(0, info.vertexBuffer().slice());
