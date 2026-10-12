@@ -1,0 +1,14 @@
+
+{
+  "required": true,
+  "package": "com.oreseer.mixin",
+  "client": [
+    "CameraMixin",
+    "EntityTurnMixin",
+    "LocalPlayerMixin",
+    "ClientInputAccessor"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
